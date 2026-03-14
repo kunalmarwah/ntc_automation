@@ -5,3 +5,7 @@ def test_login(driver):
 
     login_page.open()
     login_page.login('bineet_kumar', 'Cdot@123456')
+    input("Enter captcha manually and press enter")
+
+    assert "NTC" in driver.page_source
+
