@@ -9,7 +9,7 @@ def driver() :
     yield driver
     driver.quit()
 
-@pytest.mark.smoke
+@pytest.fixture
 def login(driver):
     login_page = LoginPage(driver)
     login_page.open()
@@ -17,4 +17,5 @@ def login(driver):
 
     input("Enter captcha manually and press enter")
 
+    return driver
 
