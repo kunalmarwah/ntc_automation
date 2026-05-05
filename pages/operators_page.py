@@ -16,6 +16,8 @@ class OperatorsPage(BasePage):
     repeat_password = (By.XPATH, "/html[1]/body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]/div[1]/input[1]")
     create_button = (By.XPATH, "//button[normalize-space()='Create']")
 
+    actions_button  = (By.XPATH, "//tbody/tr[1]/td[8]/button[1]//*[name()='svg']")
+
 
     def click_create_operators(self):
         return self.click(self.Click_create_operator)
@@ -47,6 +49,8 @@ class OperatorsPage(BasePage):
     def create_button_click(self):
         return self.click(self.create_button)
 
+    def click_actions_button(self):
+        return self.click(self.actions_button)
 
 
 

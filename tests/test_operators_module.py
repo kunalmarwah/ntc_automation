@@ -4,9 +4,9 @@ import pytest
 
 from pages.dashboard_page import DashboardPage
 from pages.operators_page import OperatorsPage
-@pytest.mark.smoke
-def test_operators_module(login):
 
+@pytest.mark.smoke
+def test_operators_module_create_operator(login):
     operators_nav_mod = DashboardPage(login)
     ope_nav_mod = OperatorsPage(login)
 
@@ -23,4 +23,12 @@ def test_operators_module(login):
     ope_nav_mod.repeat_password_type()
     ope_nav_mod.create_button_click()
     time.sleep(5)
+@pytest.mark.sanity
+def test_edit_operators(login):
 
+    operators_nav_mod = DashboardPage(login)
+    ope_nav_mod = OperatorsPage(login)
+
+    operators_nav_mod.click_operators()
+    ope_nav_mod.click_actions_button()
+    time.sleep(5)
