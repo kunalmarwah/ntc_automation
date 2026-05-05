@@ -16,3 +16,6 @@ class LoginPage(BasePage):
         self.type(self.USERNAME, username)
         self.type(self.PASSWORD, password)
         self.click(self.SIGN_IN)
+
+
+

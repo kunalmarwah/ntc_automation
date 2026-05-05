@@ -4,7 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(driver, 20)
+        self.wait = WebDriverWait(driver, 10)
 
     def click(self, locator):
         element = self.wait.until(EC.element_to_be_clickable(locator))
