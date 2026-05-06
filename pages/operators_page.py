@@ -17,34 +17,35 @@ class OperatorsPage(BasePage):
     create_button = (By.XPATH, "//button[normalize-space()='Create']")
 
     actions_button  = (By.XPATH, "//tbody/tr[1]/td[8]/button[1]//*[name()='svg']")
+    edit_button = (By.XPATH, "//li[normalize-space()='Edit']")
 
 
     def click_create_operators(self):
         return self.click(self.Click_create_operator)
 
-    def username_type(self):
-        return self.type(self.username, "automation_text")
+    def username_type(self, value):
+        return self.type(self.username, value)
 
-    def email_address_type(self):
-        return self.type(self.email_address, "ntc.ne2@cdot.in")
+    def email_address_type(self, value):
+        return self.type(self.email_address, value)
 
-    def first_name_type(self):
-        return self.type(self.first_name, "Ashok")
+    def first_name_type(self, value):
+        return self.type(self.first_name, value)
 
-    def last_name_type(self):
-        return self.type(self.last_name, "Sachdeva")
+    def last_name_type(self, value):
+        return self.type(self.last_name, value)
 
-    def designation_type(self):
-        return self.type(self.designation, "Process Manager")
+    def designation_type(self, value):
+        return self.type(self.designation, value)
 
-    def phone_number_type(self):
-        return self.type(self.phone_number, "8800141659")
+    def phone_number_type(self, value):
+        return self.type(self.phone_number, value)
 
-    def password_type(self):
-        return self.type(self.password, "Cdot@12345")
+    def password_type(self, value):
+        return self.type(self.password, value)
 
-    def repeat_password_type(self):
-        return self.type(self.repeat_password, "Cdot@12345")
+    def repeat_password_type(self, value):
+        return self.type(self.repeat_password, value)
 
     def create_button_click(self):
         return self.click(self.create_button)
@@ -52,5 +53,15 @@ class OperatorsPage(BasePage):
     def click_actions_button(self):
         return self.click(self.actions_button)
 
+    def click_edit_button(self):
+        return self.click(self.edit_button)
 
-
+    def fill_operators_form(self, data):
+        self.username_type(data["username"])
+        self.email_address_type(data["email"])
+        self.first_name_type(data["first_name"])
+        self.last_name_type(data["last_name"])
+        self.designation_type(data["designation"])
+        self.phone_number_type(data["phone"])
+        self.password_type(data["password"])
+        self.repeat_password_type(data["password"])

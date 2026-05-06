@@ -1,0 +1,20 @@
+[
+    {
+        "username": "user_automation1",
+        "email": "kunalmarwah08@gmail.com",
+        "first_name": "Shikhar",
+        "last_name": "Verma",
+        "designation": "Automation Lead",
+        "phone": "9899056747",
+        "password": "Cdot@12345"
+    },
+    {
+        "username": "user_automation2",
+        "email": "kunalmarwah08@gmail.com",
+        "first_name": "Mihir",
+        "last_name": "Goel",
+        "designation": "Project Engineer",
+        "phone": "9818088539",
+        "password": "Cdot@12345"
+    }
+]
