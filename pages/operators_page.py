@@ -65,3 +65,4 @@ class OperatorsPage(BasePage):
         self.phone_number_type(data["phone"])
         self.password_type(data["password"])
         self.repeat_password_type(data["password"])
+

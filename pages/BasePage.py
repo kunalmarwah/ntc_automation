@@ -17,3 +17,10 @@ class BasePage:
     def get_text(self, locator):
         element = self.wait.until(EC.visibility_of_element_located(locator))
         return element.text
+
+    def handle_alert(self):
+        alert = self.wait.until(EC.alert_is_present())
+
+        text = alert.text
+        alert.accept()
+        return text

@@ -19,7 +19,8 @@ def test_operators_module_create_operator(login, operators_data):
 
     ope_nav_mod.fill_operators_form(operators_data)
     ope_nav_mod.create_button_click()
-    time.sleep(5)
+    alert_message = ope_nav_mod.handle_alert()
+    assert "Operator Created" in alert_message
 @pytest.mark.sanity
 def test_edit_operators(login):
 
